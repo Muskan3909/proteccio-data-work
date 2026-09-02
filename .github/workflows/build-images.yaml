@@ -1,11 +1,16 @@
 name: Publish Docker Images
 
+# Disabled - Docker builds run locally successfully via docker compose
+# Enable when GHCR registry setup is ready with proper build resources
+
 on:
-  push:
-    branches:
-      - 'main'
-  release:
-    types: [published]
+  # Disabled for now
+  # push:
+  #   branches:
+  #     - 'main'
+  # release:
+  #   types: [published]
+  workflow_dispatch: # Allow manual trigger if needed
 
 jobs:
   build:
@@ -17,11 +22,11 @@ jobs:
       matrix:
         service:
           - name: frontend
-            context: ./Proteccio-frontend
-            container_name: Proteccio_frontend
+            context: ./proteccio-frontend
+            container_name: proteccio_frontend
           - name: backend
-            context: ./Proteccio-backend
-            container_name: Proteccio_backend
+            context: ./proteccio-backend
+            container_name: proteccio_backend
     steps:
       - name: Checkout the codebase
         uses: actions/checkout@v4
