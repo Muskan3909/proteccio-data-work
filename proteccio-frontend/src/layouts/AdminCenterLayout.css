@@ -1,0 +1,73 @@
+.proteccio-admin-center {
+  color: var(--proteccio-text);
+}
+
+.proteccio-admin-center > .ant-typography {
+  color: var(--proteccio-text) !important;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.proteccio-admin-center .ant-card,
+.proteccio-admin-center .ant-card-bordered,
+.proteccio-admin-center .ant-table-wrapper,
+.proteccio-admin-center .ant-table-container {
+  border-color: var(--proteccio-line) !important;
+  border-radius: 14px !important;
+}
+
+.proteccio-admin-center .ant-card,
+.proteccio-admin-center .ant-card-body,
+.proteccio-admin-center .ant-table,
+.proteccio-admin-center .ant-table-container {
+  background: var(--proteccio-panel) !important;
+}
+
+.proteccio-admin-center .ant-card-head {
+  background: var(--proteccio-panel) !important;
+  border-bottom-color: var(--proteccio-line) !important;
+  color: var(--proteccio-text) !important;
+}
+
+.proteccio-admin-center .ant-table-thead > tr > th {
+  background: var(--proteccio-panel-2) !important;
+  border-bottom-color: var(--proteccio-line) !important;
+  color: var(--proteccio-text-dim) !important;
+}
+
+.proteccio-admin-center .ant-table-tbody > tr > td {
+  background: var(--proteccio-panel) !important;
+  border-bottom-color: var(--proteccio-line) !important;
+  color: var(--proteccio-text) !important;
+}
+
+.proteccio-admin-center .ant-table-tbody > tr:hover > td {
+  background: var(--proteccio-panel-2) !important;
+}
+
+.proteccio-admin-center .ant-input,
+.proteccio-admin-center .ant-input-affix-wrapper,
+.proteccio-admin-center .ant-select-selector {
+  background: var(--proteccio-panel-2) !important;
+  border-color: var(--proteccio-line) !important;
+  color: var(--proteccio-text) !important;
+}
+
+.proteccio-admin-center .ant-input::placeholder {
+  color: #71839a !important;
+}
+
+.proteccio-admin-center .ant-btn-primary {
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%) !important;
+  border-color: var(--proteccio-accent) !important;
+  color: #06130d !important;
+}
+
+.proteccio-admin-center .ant-pagination-item-active {
+  background: #0d3934 !important;
+  border-color: var(--proteccio-accent) !important;
+}
+
+.proteccio-admin-center .ant-pagination-item-active a {
+  color: #22c55e !important;
+}

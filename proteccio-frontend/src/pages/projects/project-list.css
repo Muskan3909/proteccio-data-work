@@ -1,0 +1,292 @@
+.ant-segmented-item-selected {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow:
+    0 2px 8px -2px #0000000d,
+    0 1px 4px -1px #00000012,
+    0 0 1px #00000014;
+  color: #262626;
+}
+
+:where(.css-dev-only-do-not-override-c1iapc).ant-space-compact-block {
+  width: unset !important;
+}
+
+@media (max-width: 1000px) {
+  .project-card.ant-card .ant-card-body {
+    padding: 0 !important;
+  }
+}
+
+/* Allow the scrollbar gutter to render outside the card body content area */
+.project-card.ant-card .ant-card-body {
+  overflow: hidden;
+}
+
+/* Group view scroll container — scrollbar stays inside the card */
+.project-group-scroll-container {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: -24px;
+  padding: 24px;
+}
+
+/* remove the border after the tabs in project view  */
+:where(.css-dev-only-do-not-override-17sis5b).ant-tabs-top > .ant-tabs-nav::before,
+:where(.css-dev-only-do-not-override-17sis5b).ant-tabs-bottom > .ant-tabs-nav::before,
+:where(.css-dev-only-do-not-override-17sis5b).ant-tabs-top > div > .ant-tabs-nav::before,
+:where(.css-dev-only-do-not-override-17sis5b).ant-tabs-bottom > div > .ant-tabs-nav::before {
+  border: none;
+}
+
+.project-group-container {
+  margin-top: 16px;
+}
+
+.project-group {
+  margin-bottom: 32px;
+}
+
+.project-group-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 8px;
+}
+
+.group-color-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.group-stats {
+  margin-left: 8px;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.project-card {
+  height: 100%;
+  overflow: hidden;
+}
+
+.proteccio-projects-page {
+  min-height: calc(100vh - 78px);
+  padding: 28px 0 64px;
+  color: var(--pc-text);
+}
+
+.proteccio-projects-page .site-page-header {
+  padding: 0 0 24px !important;
+}
+
+.proteccio-projects-page .site-page-header h1,
+.proteccio-projects-page .site-page-header .ant-page-header-heading-title {
+  color: var(--pc-text) !important;
+  font-size: 28px;
+  font-weight: 750;
+}
+
+.proteccio-projects-page .site-page-header .ant-flex {
+  gap: 8px;
+}
+
+.proteccio-projects-page .ant-input,
+.proteccio-projects-page .ant-select-selector,
+.proteccio-projects-page .ant-segmented {
+  background: var(--pc-panel-2) !important;
+  border-color: var(--pc-line) !important;
+  color: var(--pc-text) !important;
+}
+
+.proteccio-projects-page .ant-input-affix-wrapper {
+  width: 264px;
+  height: 50px;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+
+.proteccio-projects-page .ant-input-affix-wrapper .ant-input {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.proteccio-projects-page .ant-segmented {
+  padding: 3px;
+  border-radius: 11px;
+}
+
+.proteccio-projects-page .ant-segmented-item-selected,
+.proteccio-projects-page .project-filter-segmented .ant-segmented-item-selected {
+  background: var(--pc-panel) !important;
+  color: var(--pc-text) !important;
+  box-shadow: 0 0 0 1px var(--pc-line) !important;
+}
+
+.proteccio-projects-page .project-filter-segmented .ant-segmented-item-selected {
+  color: var(--pc-green) !important;
+}
+
+.proteccio-projects-page .project-card {
+  background: var(--pc-panel) !important;
+  border: 1px solid var(--pc-line) !important;
+  border-radius: 18px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.proteccio-projects-page .project-card .ant-card-body,
+.proteccio-projects-page .project-card .ant-card-head,
+.proteccio-projects-page .project-card .ant-table-wrapper,
+.proteccio-projects-page .project-card .ant-table,
+.proteccio-projects-page .project-card .ant-table-container,
+.proteccio-projects-page .project-card .ant-table-content,
+.proteccio-projects-page .project-card .ant-table-header,
+.proteccio-projects-page .project-card .ant-table-body,
+.proteccio-projects-page .project-card .ant-table-sticky-holder {
+  background: transparent !important;
+}
+
+.proteccio-projects-page .project-card .ant-card-body {
+  padding: 0 !important;
+}
+
+.proteccio-projects-page .project-card .ant-table-thead > tr > th {
+  background: var(--pc-panel-2) !important;
+}
+
+.proteccio-projects-page .project-card .ant-table-tbody > tr > td,
+.proteccio-projects-page .project-card .ant-table-placeholder > td,
+.proteccio-projects-page .project-card .ant-table-pagination {
+  background: transparent !important;
+}
+
+.proteccio-projects-page .project-card .ant-table-pagination {
+  border-top: 1px solid var(--pc-line);
+  margin: 0 !important;
+  padding: 12px 24px;
+}
+
+.proteccio-projects-page .ant-table,
+.proteccio-projects-page .ant-table-container,
+.proteccio-projects-page .ant-table-thead > tr > th,
+.proteccio-projects-page .ant-table-tbody > tr > td {
+  background: transparent !important;
+}
+
+.proteccio-projects-page .ant-table-thead > tr > th {
+  color: var(--pc-muted) !important;
+  border-bottom-color: var(--pc-line) !important;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.proteccio-projects-page .ant-table-tbody > tr > td {
+  color: var(--pc-text) !important;
+  border-bottom-color: rgba(38, 49, 63, 0.7) !important;
+}
+
+.proteccio-projects-page .ant-table-tbody > tr:hover > td {
+  background: rgba(46, 213, 115, 0.04) !important;
+}
+
+.proteccio-projects-page .proteccio-create-project.ant-dropdown-button {
+  display: inline-flex;
+  width: 226px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.proteccio-projects-page .proteccio-create-project.ant-dropdown-button > .ant-btn:first-child {
+  flex: 1;
+  height: 50px;
+  border-radius: 12px 0 0 12px;
+  background: #2ed573 !important;
+  border-color: #2ed573 !important;
+  color: #06170d !important;
+  font-weight: 750;
+}
+
+.proteccio-projects-page
+  .proteccio-create-project.ant-dropdown-button
+  > .ant-dropdown-trigger {
+  min-width: 48px;
+  height: 50px;
+  border-radius: 0 12px 12px 0;
+  background: #1f9e5c !important;
+  border-color: #1f9e5c !important;
+  color: #06170d !important;
+}
+
+.project-card .ant-card-cover {
+  height: 4px;
+}
+
+.project-status-bar {
+  width: 100%;
+  height: 100%;
+}
+
+.project-card-content {
+  padding: 8px;
+}
+
+.project-title {
+  margin-bottom: 8px !important;
+  min-height: 44px;
+}
+
+.project-client {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 12px;
+}
+
+.project-progress {
+  margin-bottom: 12px;
+}
+
+.project-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.project-meta span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.project-status-tag {
+  margin-top: 8px;
+  width: 100%;
+  text-align: center;
+}
+/* Light mode */
+.project-filter-segmented .ant-segmented-item-selected {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow:
+    0 2px 8px -2px #0000000d,
+    0 1px 4px -1px #00000012,
+    0 0 1px #00000014;
+  color: #262626;
+}
+
+/* Dark mode */
+html.dark .project-filter-segmented .ant-segmented-item-selected,
+html[data-theme="dark"] .project-filter-segmented .ant-segmented-item-selected {
+  background-color: #3a3a3a !important;
+  color: #e6e6e6 !important;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.15),
+    0 1px 4px rgba(0, 0, 0, 0.5) !important;
+}

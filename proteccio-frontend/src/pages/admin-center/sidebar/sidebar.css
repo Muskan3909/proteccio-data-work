@@ -1,0 +1,39 @@
+.admin-center-sidebar-button {
+  border-radius: 0.5rem !important;
+}
+
+.proteccio-admin-center .ant-menu {
+  background: transparent !important;
+  color: var(--proteccio-text-dim);
+}
+
+.proteccio-admin-center .ant-menu-item {
+  color: var(--proteccio-text-dim) !important;
+  border-radius: 8px !important;
+  margin: 4px 0 !important;
+}
+
+.proteccio-admin-center .ant-menu-item:hover {
+  background: var(--proteccio-accent-soft) !important;
+  color: var(--proteccio-accent) !important;
+}
+
+.proteccio-admin-center .ant-menu-item-selected {
+  background: var(--proteccio-accent-soft) !important;
+  color: var(--proteccio-accent) !important;
+}
+
+.proteccio-admin-center .ant-menu-item-selected a,
+.proteccio-admin-center .ant-menu-item-selected .anticon,
+.proteccio-admin-center .ant-menu-item-selected .ant-menu-title-content,
+.proteccio-admin-center .ant-menu-item-selected .ant-menu-item-icon {
+  color: var(--proteccio-accent) !important;
+}
+
+.proteccio-admin-center .ant-menu-item a {
+  color: inherit;
+}
+
+.proteccio-admin-center .ant-menu-item .ant-menu-title-content {
+  width: 100%;
+}

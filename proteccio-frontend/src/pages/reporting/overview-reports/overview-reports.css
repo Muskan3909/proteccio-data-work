@@ -1,0 +1,102 @@
+.proteccio-report-overview {
+  max-width: none;
+  margin: 0 auto;
+  color: var(--proteccio-text);
+}
+
+.proteccio-report-overview .site-page-header {
+  padding: 0 0 6px !important;
+}
+
+.proteccio-report-overview .site-page-header h1,
+.proteccio-report-overview .site-page-header .ant-page-header-heading-title {
+  color: var(--proteccio-text) !important;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.proteccio-report-overview .proteccio-report-stats > * {
+  min-width: 0;
+  flex: 1;
+}
+
+.proteccio-report-overview .overview-stat-card {
+  min-height: 126px;
+  border: 1px solid var(--proteccio-line) !important;
+  border-radius: 14px !important;
+  background: var(--proteccio-panel) !important;
+  box-shadow: none !important;
+}
+
+.proteccio-report-overview .overview-stat-card.dark-mode,
+.proteccio-report-overview .overview-stat-card.light-mode {
+  background: var(--proteccio-panel) !important;
+  border: 1px solid var(--proteccio-line) !important;
+  border-radius: 14px !important;
+}
+
+.proteccio-report-overview .overview-stat-card .ant-card-body {
+  padding: 22px 24px !important;
+}
+
+.proteccio-report-overview .overview-stat-card .ant-card,
+.proteccio-report-overview .overview-stat-card .ant-card-body {
+  background: transparent !important;
+  border-radius: 14px !important;
+}
+
+.proteccio-report-overview .overview-stat-card > div > .ant-card > .ant-card-body > .ant-flex {
+  gap: 16px !important;
+}
+
+.proteccio-report-overview .overview-stat-icon {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.proteccio-report-overview .proteccio-report-stats > .overview-stat-card:nth-child(2) .overview-stat-icon {
+  background: #173b3b !important;
+}
+
+.proteccio-report-overview .proteccio-report-stats > .overview-stat-card:nth-child(3) .overview-stat-icon {
+  background: #3b342b !important;
+}
+
+.proteccio-report-overview .proteccio-report-teams-panel {
+  border: 1px solid #26364a !important;
+  border-radius: 14px !important;
+  background: #141f2d !important;
+  box-shadow: none !important;
+}
+
+.proteccio-report-overview .proteccio-report-teams-panel .ant-card-body {
+  padding: 20px !important;
+}
+
+.proteccio-report-overview .proteccio-report-teams-table .ant-table,
+.proteccio-report-overview .proteccio-report-teams-table .ant-table-container {
+  background: transparent !important;
+}
+
+.proteccio-report-overview .proteccio-report-teams-table .ant-table-thead > tr > th {
+  background: transparent !important;
+  border-bottom: 1px solid var(--proteccio-line) !important;
+  color: var(--proteccio-text-dim) !important;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.proteccio-report-overview .proteccio-report-teams-table .ant-table-tbody > tr > td {
+  background: transparent !important;
+  border-bottom: 1px solid var(--proteccio-line) !important;
+  color: var(--proteccio-text);
+}
+
+.proteccio-report-overview .proteccio-report-teams-table .ant-table-tbody > tr:hover > td {
+  background: var(--proteccio-panel-2) !important;
+}
+
+.proteccio-report-overview .proteccio-report-stats {
+  width: 100%;
+}

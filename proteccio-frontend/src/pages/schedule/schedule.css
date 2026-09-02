@@ -1,0 +1,95 @@
+.proteccio-schedule-page {
+  --schedule-bg: #081521;
+  --schedule-panel: #111c2b;
+  --schedule-panel-strong: #162231;
+  --schedule-border: #26364a;
+  --schedule-text: #f3f6fa;
+  --schedule-muted: #8d9bad;
+  color: var(--schedule-text);
+}
+
+html.light .proteccio-schedule-page,
+body.light .proteccio-schedule-page,
+[data-theme='light'] .proteccio-schedule-page,
+.theme-light .proteccio-schedule-page {
+  --schedule-bg: #f4f7f6;
+  --schedule-panel: #ffffff;
+  --schedule-panel-strong: #f1f5f3;
+  --schedule-border: #dfe7e3;
+  --schedule-text: #0b1221;
+  --schedule-muted: #5b6b78;
+}
+
+.proteccio-schedule-page > .ant-flex:first-child {
+  align-items: center;
+}
+
+.proteccio-schedule-page > .ant-flex:first-child > .ant-flex {
+  gap: 12px !important;
+}
+
+.proteccio-schedule-page > .ant-flex:first-child .ant-space {
+  align-items: center;
+  gap: 12px !important;
+}
+
+.proteccio-schedule-page .ant-btn.proteccio-schedule-control,
+.proteccio-schedule-page .ant-select-selector,
+.proteccio-schedule-page .ant-picker {
+  height: 44px !important;
+  border: 1px solid var(--schedule-border) !important;
+  border-radius: 12px !important;
+  background: var(--schedule-panel) !important;
+  color: var(--schedule-text) !important;
+  box-shadow: none !important;
+}
+
+.proteccio-schedule-page .ant-btn.proteccio-schedule-control {
+  padding-inline: 20px;
+  font-weight: 600;
+}
+
+.proteccio-schedule-page .proteccio-schedule-select {
+  width: 112px;
+}
+
+.proteccio-schedule-page .proteccio-schedule-select .ant-select-selection-item,
+.proteccio-schedule-page .ant-picker-input > input {
+  color: var(--schedule-text) !important;
+  font-weight: 600;
+}
+
+.proteccio-schedule-page .ant-select-arrow,
+.proteccio-schedule-page .ant-picker-suffix {
+  color: var(--schedule-muted) !important;
+}
+
+.proteccio-schedule-page .ant-btn.proteccio-schedule-icon-control {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--schedule-border);
+  border-radius: 50%;
+  background: var(--schedule-panel);
+  color: var(--schedule-text);
+  box-shadow: none;
+}
+
+.proteccio-schedule-page .ant-btn.proteccio-schedule-control:hover,
+.proteccio-schedule-page .ant-btn.proteccio-schedule-icon-control:hover,
+.proteccio-schedule-page .ant-picker:hover,
+.proteccio-schedule-page .ant-select:hover .ant-select-selector {
+  border-color: #3c536d !important;
+  color: #ffffff !important;
+}
+
+.proteccio-schedule-page .ant-picker {
+  width: 132px;
+}
+
+.proteccio-schedule-page .proteccio-schedule-date-picker {
+  width: 132px;
+}
+
+.proteccio-schedule-page .proteccio-schedule-date-picker .ant-picker {
+  width: 100%;
+}

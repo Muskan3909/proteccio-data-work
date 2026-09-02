@@ -1,0 +1,185 @@
+import { Button, Drawer, Dropdown } from '@/shared/antd-imports';
+import { useEffect, useState } from 'react';
+import { useAppDispatch } from '@/hooks/useAppDispatch';
+import { DownOutlined, EditOutlined, ImportOutlined } from '@/shared/antd-imports';
+import TemplateDrawer from '@/components/common/template-drawer/template-drawer';
+import { useTranslation } from 'react-i18next';
+import { useLocation, useNavigate } from 'react-router-dom';
+import {
+  setProjectData,
+  setProjectId,
+  toggleProjectDrawer,
+} from '@/features/project/project-drawer.slice';
+import { IProjectViewModel } from '@/types/project/projectViewModel.types';
+import { projectTemplatesApiService } from '@/api/project-templates/project-templates.api.service';
+import {
+  evt_projects_create_click,
+  evt_project_import_from_template_click,
+} from '@/shared/Proteccio-analytics-events';
+import { useMixpanelTracking } from '@/hooks/useMixpanelTracking';
+import ProjectImportModal from '@/pages/projects/projectView/ProjectImportModal';
+import { projectsApi } from '@/api/projects/projects.v1.api.service';
+interface CreateProjectButtonProps {
+  className?: string;
+}
+
+const CreateProjectButton: React.FC<CreateProjectButtonProps> = ({ className }) => {
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
+  const { trackMixpanelEvent } = useMixpanelTracking();
+  const [isTemplateDrawerOpen, setIsTemplateDrawerOpen] = useState(false);
+  const [currentTemplateId, setCurrentTemplateId] = useState<string>('');
+  const [selectedType, setSelectedType] = useState<'Proteccio' | 'custom'>('Proteccio');
+  const [projectImporting, setProjectImporting] = useState(false);
+  const [currentPath, setCurrentPath] = useState<string>('');
+  const [isImportExportOpen, setIsImportExportOpen] = useState(false);
+  const location = useLocation();
+  const { t } = useTranslation('create-first-project-form');
+
+  useEffect(() => {
+    const pathKey = location.pathname.split('/').pop();
+    setCurrentPath(pathKey ?? 'home');
+  }, [location]);
+
+  const handleTemplateDrawerOpen = () => {
+    trackMixpanelEvent(evt_project_import_from_template_click);
+    setIsTemplateDrawerOpen(true);
+  };
+
+  const handleTemplateDrawerClose = () => {
+    setIsTemplateDrawerOpen(false);
+    setCurrentTemplateId('');
+    setSelectedType('Proteccio');
+  };
+
+  const handleTemplateSelect = (templateId: string) => {
+    setCurrentTemplateId(templateId);
+  };
+
+  const createFromProteccioTemplate = async () => {
+    if (!currentTemplateId || currentTemplateId === '') return;
+    try {
+      setProjectImporting(true);
+    } catch (e) {
+      console.error(e);
+    } finally {
+      setProjectImporting(false);
+      handleTemplateDrawerClose();
+    }
+  };
+
+  const createFromCustomTemplate = async () => {
+    if (!currentTemplateId || currentTemplateId === '') return;
+    try {
+      setProjectImporting(true);
+    } catch (e) {
+      console.error(e);
+    } finally {
+      setProjectImporting(false);
+      handleTemplateDrawerClose();
+    }
+  };
+
+  const setCreatedProjectTemplate = async () => {
+    if (!currentTemplateId || currentTemplateId === '') return;
+    try {
+      setProjectImporting(true);
+      if (selectedType === 'Proteccio') {
+        const res = await projectTemplatesApiService.createFromProteccioTemplate({
+          template_id: currentTemplateId,
+        });
+        if (res.done && res.body.project_id) {
+          dispatch(projectsApi.util.invalidateTags([{ type: 'Projects', id: 'LIST' }]));
+          navigate(
+            `/Proteccio/projects/${res.body.project_id}?tab=tasks-list&pinned_tab=tasks-list`
+          );
+        }
+      } else {
+        const res = await projectTemplatesApiService.createFromCustomTemplate({
+          template_id: currentTemplateId,
+        });
+        if (res.done && res.body.project_id) {
+          dispatch(projectsApi.util.invalidateTags([{ type: 'Projects', id: 'LIST' }]));
+          navigate(
+            `/Proteccio/projects/${res.body.project_id}?tab=tasks-list&pinned_tab=tasks-list`
+          );
+        }
+      }
+    } catch (e) {
+      console.error(e);
+    } finally {
+      setProjectImporting(false);
+      handleTemplateDrawerClose();
+    }
+  };
+
+  const dropdownItems = [
+    {
+      key: 'template',
+      label: (
+        <div className="w-full m-0 p-0" onClick={handleTemplateDrawerOpen}>
+          <ImportOutlined className="mr-2" />
+          {currentPath === 'home' ? t('templateButton') : t('createFromTemplate')}
+        </div>
+      ),
+    },
+    // {
+    //   key: 'import-export',
+    //   label: (
+    //     <div className="w-full m-0 p-0" onClick={() => setIsImportExportOpen(true)}>
+    //       <ImportOutlined className="mr-2" />
+    //       {t('importTasks', { defaultValue: 'Import Tasks' })}
+    //     </div>
+    //   ),
+    // },
+  ];
+
+  const handleCreateProject = () => {
+    trackMixpanelEvent(evt_projects_create_click);
+    dispatch(setProjectId(null));
+    dispatch(setProjectData({} as IProjectViewModel));
+    setTimeout(() => {
+      dispatch(toggleProjectDrawer());
+    }, 300);
+  };
+
+  return (
+    <div className={className}>
+      <Dropdown.Button
+        type="primary"
+        trigger={['click']}
+        icon={<DownOutlined />}
+        onClick={handleCreateProject}
+        menu={{ items: dropdownItems }}
+      >
+        <EditOutlined /> {t('createProject')}
+      </Dropdown.Button>
+
+      <Drawer
+        title={t('templateDrawerTitle')}
+        width={1000}
+        onClose={handleTemplateDrawerClose}
+        open={isTemplateDrawerOpen}
+        footer={
+          <div className="flex justify-end px-4 py-2.5">
+            <Button className="mr-2" onClick={handleTemplateDrawerClose}>
+              {t('cancel')}
+            </Button>
+            <Button type="primary" loading={projectImporting} onClick={setCreatedProjectTemplate}>
+              {t('create')}
+            </Button>
+          </div>
+        }
+      >
+        <TemplateDrawer
+          showBothTabs={true}
+          templateSelected={handleTemplateSelect}
+          selectedTemplateType={setSelectedType}
+        />
+      </Drawer>
+      <ProjectImportModal open={isImportExportOpen} onClose={() => setIsImportExportOpen(false)} />
+    </div>
+  );
+};
+
+export default CreateProjectButton;

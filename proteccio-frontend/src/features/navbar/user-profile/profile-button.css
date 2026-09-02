@@ -1,0 +1,18 @@
+.profile-button:hover .anticon {
+  color: var(--pc-green);
+}
+
+.profile-button {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+  background: var(--pc-panel-2) !important;
+  border: 1px solid var(--pc-line) !important;
+  color: var(--pc-text-dim) !important;
+}
+
+.profile-button:hover {
+  border-color: #2ed573 !important;
+  color: #2ed573 !important;
+}

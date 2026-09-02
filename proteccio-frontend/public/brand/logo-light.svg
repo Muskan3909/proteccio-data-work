@@ -1,0 +1,5 @@
+<svg width="140" height="32" viewBox="0 0 140 32" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="4" width="24" height="24" rx="7" fill="#4f6bff"/>
+  <path d="M6 16.5l4.5 4.5L19 11" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <text x="32" y="22" font-family="-apple-system,BlinkMacSystemFont,'Inter',sans-serif" font-size="18" font-weight="700" fill="#1f2430">FlowBoard</text>
+</svg>

@@ -1,0 +1,21 @@
+{
+  "labelColumn": "Label",
+  "deleteConfirmationTitle": "Are you sure?",
+  "deleteConfirmationOk": "Yes",
+  "deleteConfirmationCancel": "Cancel",
+  "associatedTaskColumn": "Associated Task Count",
+  "searchPlaceholder": "Search by name",
+  "emptyText": "Labels can be created while updating or creating tasks.",
+  "pinTooltip": "Click to pin this into the main menu",
+  "colorChangeTooltip": "Click to change color",
+  "pageTitle": "Manage Labels",
+  "deleteConfirmTitle": "Delete Label",
+  "deleteButton": "Delete",
+  "cancelButton": "Cancel",
+  "labelInUseMessage": "The label \"{{labelName}}\" is currently assigned to {{count}} task{{plural}}.",
+  "labelDeleteWarning": "⚠️ Deleting this label will remove it from all {{count}} assigned task{{plural}}. This action cannot be undone.",
+  "deleteConfirmMessage": "Are you sure you want to delete the label \"{{labelName}}\"? This action cannot be undone.",
+  "editTooltip": "Edit",
+  "deleteTooltip": "Delete",
+  "search": "Search"
+}

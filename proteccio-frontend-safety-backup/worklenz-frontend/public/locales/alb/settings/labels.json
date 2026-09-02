@@ -1,0 +1,21 @@
+{
+  "labelColumn": "Etiketa",
+  "deleteConfirmationTitle": "Jeni i sigurt?",
+  "deleteConfirmationOk": "Po",
+  "deleteConfirmationCancel": "Anulo",
+  "associatedTaskColumn": "Numri i Detyrave të Lidhura",
+  "searchPlaceholder": "Kërko sipas emrit",
+  "emptyText": "Etiketat mund të krijohen gjatë përditësimit ose krijimit të detyrave.",
+  "pinTooltip": "Klikoni për ta fiksuar në menynë kryesore",
+  "colorChangeTooltip": "Klikoni për të ndryshuar ngjyrën",
+  "pageTitle": "Menaxho Etiketat",
+  "deleteConfirmTitle": "Fshi Etiketën",
+  "deleteButton": "Fshi",
+  "cancelButton": "Anulo",
+  "labelInUseMessage": "Etiketa \"{{labelName}}\" është aktualisht caktuar për {{count}} detyrë{{plural}}.",
+  "labelDeleteWarning": "⚠️ Fshirja e kësaj etikete do ta heqë atë nga të gjitha {{count}} detyrë{{plural}} të caktuara. Ky veprim nuk mund të zhbëhet.",
+  "deleteConfirmMessage": "Jeni i sigurt që dëshironi të fshini etiketën \"{{labelName}}\"? Ky veprim nuk mund të zhbëhet.",
+  "editTooltip": "Redakto",
+  "deleteTooltip": "Fshi",
+  "search": "Kërko"
+}

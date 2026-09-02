@@ -1,0 +1,229 @@
+.proteccio-reporting-layout {
+  --report-bg: #091322;
+  --report-sidebar: #121d2b;
+  --report-panel: #141f2d;
+  --report-border: #26364a;
+  --report-muted: #8495a8;
+  --report-text: #f4f7fb;
+  background: #091322 !important;
+}
+
+.proteccio-reporting-shell {
+  position: relative;
+  width: min(1520px, calc(100vw - 96px));
+  min-height: calc(100vh - 94px);
+  margin: 30px auto 0;
+  overflow: hidden;
+  border: 1px solid var(--report-border);
+  border-radius: 18px;
+  background: var(--report-bg) !important;
+}
+
+.proteccio-reporting-layout .ant-layout-sider {
+  position: absolute !important;
+  inset: 0 auto 0 0;
+  height: 100% !important;
+  background: var(--report-sidebar) !important;
+  border-right-color: var(--report-border) !important;
+}
+
+.proteccio-reporting-content {
+  background: var(--report-bg);
+}
+
+.proteccio-reporting-shell > .ant-layout {
+  min-height: calc(100vh - 94px);
+}
+
+.proteccio-reporting-shell .proteccio-reporting-content {
+  padding: 28px 30px !important;
+}
+
+.proteccio-reporting-layout .custom-reporting-sider {
+  background: transparent !important;
+  color: var(--report-muted);
+}
+
+.proteccio-reporting-layout .custom-reporting-sider .ant-menu-item,
+.proteccio-reporting-layout .custom-reporting-sider .ant-menu-submenu-title {
+  color: var(--report-muted);
+  border-radius: 10px;
+  margin-block: 3px !important;
+}
+
+.proteccio-reporting-layout .custom-reporting-sider .ant-menu-item-selected {
+  background: #123d35 !important;
+  border-inline-end: 3px solid #18db79 !important;
+  color: #18db79 !important;
+}
+
+.proteccio-reporting-layout .custom-reporting-sider .ant-menu-item-selected a,
+.proteccio-reporting-layout .custom-reporting-sider .ant-menu-item-selected .ant-menu-item-icon {
+  color: #18db79 !important;
+}
+
+.proteccio-reporting-layout .custom-reporting-sider .ant-menu-item-divider {
+  border-color: var(--report-border);
+  margin-block: 12px !important;
+}
+
+/* Keep every reporting surface on the same navy visual system. */
+.proteccio-reporting-shell .ant-card,
+.proteccio-reporting-shell .ant-card-head,
+.proteccio-reporting-shell .ant-card-body,
+.proteccio-reporting-shell .ant-table,
+.proteccio-reporting-shell .ant-table-container,
+.proteccio-reporting-shell .ant-table-content {
+  background: var(--report-panel) !important;
+  border-color: var(--report-border) !important;
+}
+
+.proteccio-reporting-shell .ant-card {
+  border-radius: 14px !important;
+  box-shadow: none !important;
+}
+
+.proteccio-reporting-shell .ant-card-head {
+  color: #f4f7fb !important;
+}
+
+.proteccio-reporting-shell .ant-card-head-title,
+.proteccio-reporting-shell .ant-typography,
+.proteccio-reporting-shell .ant-table-cell {
+  color: #f4f7fb;
+}
+
+.proteccio-reporting-shell .ant-table-thead > tr > th {
+  background: #111c2b !important;
+  border-bottom-color: var(--report-border) !important;
+  color: #91a2b5 !important;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.proteccio-reporting-shell .ant-table-tbody > tr > td {
+  background: var(--report-panel) !important;
+  border-bottom-color: var(--report-border) !important;
+}
+
+.proteccio-reporting-shell .ant-table-tbody > tr:hover > td {
+  background: #1a2a3a !important;
+}
+
+.proteccio-reporting-shell .ant-btn:not(.ant-btn-primary),
+.proteccio-reporting-shell .ant-input,
+.proteccio-reporting-shell .ant-input-affix-wrapper,
+.proteccio-reporting-shell .ant-select-selector,
+.proteccio-reporting-shell .ant-picker,
+.proteccio-reporting-shell .ant-segmented {
+  background: #111c2b !important;
+  border-color: var(--report-border) !important;
+  color: #f4f7fb !important;
+  border-radius: 10px !important;
+}
+
+.proteccio-reporting-shell .ant-input::placeholder,
+.proteccio-reporting-shell .ant-select-selection-placeholder,
+.proteccio-reporting-shell .ant-picker-input > input::placeholder {
+  color: var(--report-muted) !important;
+}
+
+.proteccio-reporting-shell .ant-empty-description,
+.proteccio-reporting-shell .ant-pagination,
+.proteccio-reporting-shell .ant-pagination-item a,
+.proteccio-reporting-shell .ant-pagination-prev,
+.proteccio-reporting-shell .ant-pagination-next {
+  color: var(--report-muted) !important;
+}
+
+.proteccio-reporting-shell .ant-empty-image {
+  opacity: 0.75;
+}
+
+.proteccio-reporting-shell .ant-pagination-item-active {
+  background: #123d35 !important;
+  border-color: #18db79 !important;
+}
+
+.proteccio-reporting-shell .ant-pagination-item-active a {
+  color: #18db79 !important;
+}
+
+.proteccio-reporting-shell .ant-progress-bg {
+  background: linear-gradient(90deg, #24d477, #16a765) !important;
+}
+
+html.light .proteccio-reporting-layout,
+body.light .proteccio-reporting-layout,
+[data-theme='light'] .proteccio-reporting-layout,
+.theme-light .proteccio-reporting-layout {
+  --report-bg: #f4f7f6;
+  --report-sidebar: #ffffff;
+  --report-panel: #ffffff;
+  --report-border: #dfe7e3;
+  --report-muted: #5b6b78;
+  --report-text: #0b1221;
+  background: var(--report-bg) !important;
+}
+
+html.light .proteccio-reporting-shell,
+body.light .proteccio-reporting-shell,
+[data-theme='light'] .proteccio-reporting-shell,
+.theme-light .proteccio-reporting-shell {
+  background: var(--report-bg) !important;
+}
+
+html.light .proteccio-reporting-shell .ant-card-head,
+body.light .proteccio-reporting-shell .ant-card-head,
+[data-theme='light'] .proteccio-reporting-shell .ant-card-head,
+.theme-light .proteccio-reporting-shell .ant-card-head {
+  color: #0b1221 !important;
+}
+
+html.light .proteccio-reporting-shell .ant-card-head-title,
+html.light .proteccio-reporting-shell .ant-typography,
+html.light .proteccio-reporting-shell .ant-table-cell,
+body.light .proteccio-reporting-shell .ant-card-head-title,
+body.light .proteccio-reporting-shell .ant-typography,
+body.light .proteccio-reporting-shell .ant-table-cell,
+[data-theme='light'] .proteccio-reporting-shell .ant-card-head-title,
+[data-theme='light'] .proteccio-reporting-shell .ant-typography,
+[data-theme='light'] .proteccio-reporting-shell .ant-table-cell,
+.theme-light .proteccio-reporting-shell .ant-card-head-title,
+.theme-light .proteccio-reporting-shell .ant-typography,
+.theme-light .proteccio-reporting-shell .ant-table-cell {
+  color: #0b1221 !important;
+}
+
+html.light .proteccio-reporting-shell .ant-table-thead > tr > th,
+body.light .proteccio-reporting-shell .ant-table-thead > tr > th,
+[data-theme='light'] .proteccio-reporting-shell .ant-table-thead > tr > th,
+.theme-light .proteccio-reporting-shell .ant-table-thead > tr > th,
+html.light .proteccio-reporting-shell .ant-btn:not(.ant-btn-primary),
+html.light .proteccio-reporting-shell .ant-input,
+html.light .proteccio-reporting-shell .ant-input-affix-wrapper,
+html.light .proteccio-reporting-shell .ant-select-selector,
+html.light .proteccio-reporting-shell .ant-picker,
+html.light .proteccio-reporting-shell .ant-segmented,
+body.light .proteccio-reporting-shell .ant-btn:not(.ant-btn-primary),
+body.light .proteccio-reporting-shell .ant-input,
+body.light .proteccio-reporting-shell .ant-input-affix-wrapper,
+body.light .proteccio-reporting-shell .ant-select-selector,
+body.light .proteccio-reporting-shell .ant-picker,
+body.light .proteccio-reporting-shell .ant-segmented,
+[data-theme='light'] .proteccio-reporting-shell .ant-btn:not(.ant-btn-primary),
+[data-theme='light'] .proteccio-reporting-shell .ant-input,
+[data-theme='light'] .proteccio-reporting-shell .ant-input-affix-wrapper,
+[data-theme='light'] .proteccio-reporting-shell .ant-select-selector,
+[data-theme='light'] .proteccio-reporting-shell .ant-picker,
+[data-theme='light'] .proteccio-reporting-shell .ant-segmented,
+.theme-light .proteccio-reporting-shell .ant-btn:not(.ant-btn-primary),
+.theme-light .proteccio-reporting-shell .ant-input,
+.theme-light .proteccio-reporting-shell .ant-input-affix-wrapper,
+.theme-light .proteccio-reporting-shell .ant-select-selector,
+.theme-light .proteccio-reporting-shell .ant-picker,
+.theme-light .proteccio-reporting-shell .ant-segmented {
+  background: var(--report-panel) !important;
+  color: #0b1221 !important;
+}

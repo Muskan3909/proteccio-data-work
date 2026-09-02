@@ -1,0 +1,89 @@
+{
+  "todoList": {
+    "title": "Lista e Detyrave",
+    "refreshTasks": "Rifresko detyrat",
+    "addTask": "+ Shto Detyrë",
+    "noTasks": "Asnjë detyrë",
+    "pressEnter": "Shtyp",
+    "toCreate": "për të krijuar.",
+    "markAsDone": "Shëno si të përfunduar"
+  },
+  "projects": {
+    "title": "Projektet",
+    "refreshProjects": "Rifresko projektet",
+    "noRecentProjects": "Aktualisht nuk jeni caktuar në asnjë projekt.",
+    "noFavouriteProjects": "Asnjë projekt i shënuar si i preferuar.",
+    "recent": "Të Fundit",
+    "favourites": "Të Preferuarat"
+  },
+  "tasks": {
+    "assignedToMe": "Më janë caktuar",
+    "assignedByMe": "I kam caktuar",
+    "all": "Të Gjitha",
+    "today": "Sot",
+    "upcoming": "Ardhj",
+    "overdue": "Të vonuara",
+    "noDueDate": "Pa afat",
+    "noTasks": "Asnjë detyrë për të shfaqur.",
+    "addTask": "+ Shto detyrë",
+    "name": "Emri",
+    "project": "Projekti",
+    "status": "Statusi",
+    "dueDate": "Afati",
+    "dueDatePlaceholder": "Cakto Afatin",
+    "tomorrow": "Nesër",
+    "nextWeek": "Javën e Ardhshme",
+    "nextMonth": "Muajin e Ardhshëm",
+    "projectRequired": "Ju lutemi zgjidhni një projekt",
+    "pressTabToSelectDueDateAndProject": "Shtyp Tab për të zgjedhur afatin dhe projektin",
+    "dueOn": "Detyrat me afat më",
+    "taskRequired": "Ju lutemi shtoni një detyrë",
+    "list": "Listë",
+    "calendar": "Kalendar",
+    "tasks": "Detyrat",
+    "refresh": "Rifresko",
+    "recentActivity": "Aktiviteti i Fundit",
+    "recentTasks": "Detyrat e Fundit",
+    "recentTasksSegment": "Detyrat e Fundit",
+    "timeLogged": "Koha e Regjistruar",
+    "timeLoggedSegment": "Koha e Regjistruar",
+    "noRecentTasks": "Asnjë detyrë e fundit",
+    "noTimeLoggedTasks": "Asnjë detyrë me kohë të regjistruar",
+    "activityTag": "Aktiviteti",
+    "timeLogTag": "Regjistrim Kohe",
+    "timerTag": "Kohëmatës",
+    "activitySingular": "aktivitet",
+    "activityPlural": "aktivitete",
+    "recentTaskAriaLabel": "Detyrë e fundit:",
+    "timeLoggedTaskAriaLabel": "Detyrë me kohë të regjistruar:",
+    "errorLoadingRecentTasks": "Gabim në ngarkimin e detyrave të fundit",
+    "errorLoadingTimeLoggedTasks": "Gabim në ngarkimin e detyrave me kohë të regjistruar"
+  },
+  "activityLogs": {
+    "title": "Aktiviteti i Fundit",
+    "refresh": "Rifresko regjistrimet e aktivitetit",
+    "noActivities": "Nuk ka aktivitete të fundit",
+    "deletedProject": "(I fshirë)",
+    "project": {
+      "created": "{{userName}} krijoi projektin {{projectName}}",
+      "updated": "{{userName}} përditësoi projektin {{projectName}}",
+      "deleted": "{{userName}} fshiu projektin {{projectName}}",
+      "archived": "{{userName}} arkivoi projektin {{projectName}}",
+      "unarchived": "{{userName}} nxori nga arkivi projektin {{projectName}}",
+      "favorited": "{{userName}} shënoi si të preferuar projektin {{projectName}}",
+      "unfavorited": "{{userName}} hoqi nga të preferuarit projektin {{projectName}}",
+      "statusChanged": "{{userName}} ndryshoi statusin e projektit {{projectName}}",
+      "managerAssigned": "{{userName}} caktoi një menaxher për projektin {{projectName}}",
+      "managerRemoved": "{{userName}} hoqi menaxherin e projektit {{projectName}}",
+      "memberAdded": "{{userName}} shtoi {{memberName}} në projektin {{projectName}}",
+      "memberRemoved": "{{userName}} hoqi {{memberName}} nga projekti {{projectName}}"
+    },
+    "task": {
+      "created": "{{userName}} krijoi detyrën {{taskName}}",
+      "updated": "{{userName}} përditësoi detyrën {{taskName}}"
+    },
+    "generic": {
+      "activity": "{{userName}} kreu një aktivitet"
+    }
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "todoList": {
+    "title": "Lista de tareas",
+    "refreshTasks": "Actualizar tareas",
+    "addTask": "+ Agregar tarea",
+    "noTasks": "Sin tareas",
+    "pressEnter": "Presiona",
+    "toCreate": "para crear.",
+    "markAsDone": "Marcar como hecho"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "refreshProjects": "Actualizar proyectos",
+    "noRecentProjects": "Actualmente no estás asignado a ningún proyecto.",
+    "noFavouriteProjects": "No hay proyectos marcados como favoritos.",
+    "recent": "Recientes",
+    "favourites": "Favoritos"
+  },
+  "tasks": {
+    "assignedToMe": "Asignadas a mí",
+    "assignedByMe": "Asignadas por mí",
+    "all": "Todas",
+    "today": "Hoy",
+    "upcoming": "Próximas",
+    "overdue": "Vencidas",
+    "noDueDate": "Sin fecha de vencimiento",
+    "noTasks": "No hay tareas para mostrar.",
+    "addTask": "+ Agregar tarea",
+    "name": "Nombre",
+    "project": "Proyecto",
+    "status": "Estado",
+    "dueDate": "Fecha de vencimiento",
+    "dueDatePlaceholder": "Establecer fecha de vencimiento",
+    "tomorrow": "Mañana",
+    "nextWeek": "La semana que viene",
+    "nextMonth": "El próximo mes",
+    "projectRequired": "Por favor selecciona un proyecto",
+    "dueOn": "Tareas vencidas el",
+    "taskRequired": "Por favor agrega una tarea",
+    "list": "Lista",
+    "calendar": "Calendario",
+    "tasks": "Tareas",
+    "refresh": "Actualizar",
+    "recentActivity": "Actividad Reciente",
+    "recentTasks": "Tareas Recientes",
+    "recentTasksSegment": "Tareas Recientes",
+    "timeLogged": "Tiempo Registrado",
+    "timeLoggedSegment": "Tiempo Registrado",
+    "noRecentTasks": "No hay tareas recientes",
+    "noTimeLoggedTasks": "No hay tareas con tiempo registrado",
+    "activityTag": "Actividad",
+    "timeLogTag": "Registro de Tiempo",
+    "timerTag": "Temporizador",
+    "activitySingular": "actividad",
+    "activityPlural": "actividades",
+    "recentTaskAriaLabel": "Tarea reciente:",
+    "timeLoggedTaskAriaLabel": "Tarea con tiempo registrado:",
+    "errorLoadingRecentTasks": "Error al cargar tareas recientes",
+    "errorLoadingTimeLoggedTasks": "Error al cargar tareas con tiempo registrado"
+  },
+  "activityLogs": {
+    "title": "Actividad Reciente",
+    "refresh": "Actualizar registros de actividad",
+    "noActivities": "Sin actividades recientes",
+    "deletedProject": "(Eliminado)",
+    "project": {
+      "created": "{{userName}} creó el proyecto {{projectName}}",
+      "updated": "{{userName}} actualizó el proyecto {{projectName}}",
+      "deleted": "{{userName}} eliminó el proyecto {{projectName}}",
+      "archived": "{{userName}} archivó el proyecto {{projectName}}",
+      "unarchived": "{{userName}} desarchivó el proyecto {{projectName}}",
+      "favorited": "{{userName}} marcó como favorito el proyecto {{projectName}}",
+      "unfavorited": "{{userName}} quitó de favoritos el proyecto {{projectName}}",
+      "statusChanged": "{{userName}} cambió el estado del proyecto {{projectName}}",
+      "managerAssigned": "{{userName}} asignó un gerente de proyecto a {{projectName}}",
+      "managerRemoved": "{{userName}} removió el gerente del proyecto {{projectName}}",
+      "memberAdded": "{{userName}} añadió a {{memberName}} al proyecto {{projectName}}",
+      "memberRemoved": "{{userName}} eliminó a {{memberName}} del proyecto {{projectName}}"
+    },
+    "task": {
+      "created": "{{userName}} creó la tarea {{taskName}}",
+      "updated": "{{userName}} actualizó la tarea {{taskName}}"
+    },
+    "generic": {
+      "activity": "{{userName}} realizó una actividad"
+    }
+  }
+}

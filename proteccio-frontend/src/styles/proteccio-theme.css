@@ -1,0 +1,258 @@
+/* =========================================================
+   Proteccio Design System — global theme layer
+   Source of truth for the visual language shown in the
+   Proteccio UI mockup. Colors mirror src/config/theme.config.ts
+   and src/styles/colors.ts — keep the three in sync.
+   ========================================================= */
+
+:root {
+  --pc-bg: #08111f;
+  --pc-panel: #131b27;
+  --pc-panel-2: #1a2432;
+  --pc-line: #26313f;
+  --pc-text: #f3f6f9;
+  --pc-text-dim: #93a1af;
+  --pc-cyan: #2ed573;
+  --pc-cyan-dim: rgba(46, 213, 115, 0.14);
+  --pc-amber: #f0a93f;
+  --pc-amber-dim: rgba(240, 169, 63, 0.14);
+  --pc-red: #f1555c;
+  --pc-red-dim: rgba(241, 85, 92, 0.14);
+  --pc-violet: #17a863;
+  --pc-admin: #4c7eff;
+  --pc-admin-dim: rgba(76, 126, 255, 0.14);
+  --pc-admin-line: rgba(76, 126, 255, 0.35);
+}
+
+[data-theme='light'] {
+  --pc-bg: #f4f7f6;
+  --pc-panel: #ffffff;
+  --pc-panel-2: #f1f5f3;
+  --pc-line: #e3e9e6;
+  --pc-text: #0b1221;
+  --pc-text-dim: #5b6b78;
+}
+
+.display,
+.pc-display {
+  font-family: 'Sora', -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.mono,
+.pc-mono {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  letter-spacing: 0.02em;
+}
+
+/* Ambient page background, matching the mockup's soft radial glow */
+[data-theme='dark'] body {
+  background:
+    radial-gradient(circle at 15% 0%, rgba(46, 213, 115, 0.08), transparent 40%),
+    radial-gradient(circle at 85% 15%, rgba(46, 213, 115, 0.05), transparent 45%),
+    var(--pc-bg);
+}
+
+[data-theme='light'] body {
+  background: var(--pc-bg);
+}
+
+/* Scrollbars */
+[data-theme='dark'] ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+[data-theme='dark'] ::-webkit-scrollbar-track {
+  background: transparent;
+}
+[data-theme='dark'] ::-webkit-scrollbar-thumb {
+  background: var(--pc-line);
+  border-radius: 8px;
+}
+[data-theme='dark'] ::-webkit-scrollbar-thumb:hover {
+  background: var(--pc-panel-2);
+}
+
+/* ---------- Top navigation ---------- */
+.ant-layout-header {
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--pc-line);
+  height: 78px !important;
+  line-height: normal !important;
+}
+
+.proteccio-navbar {
+  min-height: 78px;
+}
+
+.proteccio-brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 44px;
+}
+
+.proteccio-brand-mark {
+  width: 34px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.proteccio-brand-name {
+  color: var(--pc-text);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.proteccio-brand-name::first-letter {
+  color: var(--pc-cyan);
+}
+
+/* Horizontal nav — pill active state + underline, matching the mockup nav-links */
+.ant-menu-horizontal {
+  background: transparent !important;
+}
+.ant-menu-horizontal > .ant-menu-item,
+.ant-menu-horizontal > .ant-menu-submenu {
+  height: 34px !important;
+  line-height: 34px !important;
+  padding-inline: 14px !important;
+  border-radius: 8px !important;
+  margin-inline: 2px !important;
+  top: 0 !important;
+  border-bottom: none !important;
+  transition: all 0.15s ease;
+}
+.ant-menu-horizontal > .ant-menu-item::after,
+.ant-menu-horizontal > .ant-menu-submenu::after {
+  display: none !important;
+}
+.ant-menu-horizontal > .ant-menu-item-selected {
+  position: relative;
+  background: var(--pc-cyan-dim) !important;
+}
+.ant-menu-horizontal > .ant-menu-item-selected::before {
+  content: '';
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: -15px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--pc-cyan);
+}
+
+/* Circular icon buttons in the header (notifications, help, timer, etc.) */
+.ant-layout-header .ant-btn-circle,
+.ant-layout-header .ant-btn-icon-only {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  border: 1px solid var(--pc-line);
+  background: var(--pc-panel);
+  color: var(--pc-text-dim);
+}
+.ant-layout-header .ant-btn-circle:hover,
+.ant-layout-header .ant-btn-icon-only:hover {
+  border-color: var(--pc-cyan);
+  color: var(--pc-cyan);
+}
+
+/* ---------- Cards / panels ---------- */
+.ant-card,
+.ant-card .ant-card-head,
+.ant-card .ant-card-body {
+  background-color: var(--pc-panel) !important;
+  border-color: var(--pc-line);
+}
+
+.ant-input,
+.ant-select .ant-select-selector,
+.ant-pagination .ant-select-selector {
+  background-color: var(--pc-panel-2) !important;
+  border-color: var(--pc-line) !important;
+  color: var(--pc-text) !important;
+}
+
+.ant-select-selection-item,
+.ant-select-selection-placeholder,
+.ant-input::placeholder {
+  color: var(--pc-text-dim) !important;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner,
+.ant-checkbox-indeterminate .ant-checkbox-inner {
+  background-color: var(--pc-cyan) !important;
+  border-color: var(--pc-cyan) !important;
+}
+
+.ant-checkbox-wrapper:hover .ant-checkbox-inner,
+.ant-checkbox:hover .ant-checkbox-inner {
+  border-color: var(--pc-cyan) !important;
+}
+
+.auth-login-card.ant-card,
+.auth-forgot-password-card.ant-card,
+.auth-signup-card.ant-card,
+.auth-login-card .ant-card-body,
+.auth-forgot-password-card .ant-card-body,
+.auth-signup-card .ant-card-body {
+  background-color: var(--pc-panel) !important;
+}
+
+.auth-login-card.ant-card,
+.auth-forgot-password-card.ant-card,
+.auth-signup-card.ant-card {
+  border-color: var(--pc-line) !important;
+}
+
+.auth-login-link,
+.auth-login-link:hover,
+.auth-login-link:focus {
+  color: var(--pc-cyan) !important;
+}
+
+.auth-login-checkbox .ant-checkbox-checked .ant-checkbox-inner {
+  background-color: var(--pc-cyan) !important;
+  border-color: var(--pc-cyan) !important;
+}
+
+/* ---------- Status accent utilities (mirrors mockup badges) ---------- */
+.pc-badge-cyan {
+  color: var(--pc-cyan);
+  background: var(--pc-cyan-dim);
+  border: 1px solid rgba(46, 213, 115, 0.3);
+}
+.pc-badge-amber {
+  color: var(--pc-amber);
+  background: var(--pc-amber-dim);
+  border: 1px solid rgba(240, 169, 63, 0.3);
+}
+.pc-badge-red {
+  color: var(--pc-red);
+  background: var(--pc-red-dim);
+  border: 1px solid rgba(241, 85, 92, 0.3);
+}
+.pc-badge-admin {
+  color: var(--pc-admin);
+  background: var(--pc-admin-dim);
+  border: 1px solid var(--pc-admin-line);
+}
+.pc-badge-cyan,
+.pc-badge-amber,
+.pc-badge-red,
+.pc-badge-admin {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Buttons: soften primary hover to match the mockup's green→dark-green shift */
+.ant-btn-primary:not(:disabled):hover {
+  filter: brightness(0.92);
+}

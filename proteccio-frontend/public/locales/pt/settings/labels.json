@@ -1,0 +1,21 @@
+{
+  "labelColumn": "Rótulo",
+  "deleteConfirmationTitle": "Tem a certeza?",
+  "deleteConfirmationOk": "Sim",
+  "deleteConfirmationCancel": "Cancelar",
+  "associatedTaskColumn": "Contagem de Tarefas Associadas",
+  "searchPlaceholder": "Pesquisar por nome",
+  "emptyText": "Os rótulos podem ser criados ao atualizar ou criar tarefas.",
+  "pinTooltip": "Clique para fixar isso no menu principal",
+  "colorChangeTooltip": "Clique para mudar a cor",
+  "pageTitle": "Gerenciar Rótulos",
+  "deleteConfirmTitle": "Excluir Rótulo",
+  "deleteButton": "Excluir",
+  "cancelButton": "Cancelar",
+  "labelInUseMessage": "O rótulo \"{{labelName}}\" está atualmente atribuído a {{count}} tarefa{{plural}}.",
+  "labelDeleteWarning": "⚠️ Excluir este rótulo irá removê-lo de todas as {{count}} tarefa{{plural}} atribuída{{plural}}. Esta ação não pode ser desfeita.",
+  "deleteConfirmMessage": "Tem certeza de que deseja excluir o rótulo \"{{labelName}}\"? Esta ação não pode ser desfeita.",
+  "editTooltip": "Editar",
+  "deleteTooltip": "Excluir",
+  "search": "Pesquisar"
+}

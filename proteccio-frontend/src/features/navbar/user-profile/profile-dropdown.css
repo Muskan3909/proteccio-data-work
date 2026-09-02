@@ -1,0 +1,72 @@
+.profile-dropdown .ant-dropdown-menu {
+  margin-top: 2px !important;
+  background: var(--pc-panel) !important;
+  border: 1px solid var(--pc-line) !important;
+  border-radius: 12px !important;
+}
+
+.profile-dropdown .ant-dropdown-menu-item {
+  padding: 0 !important;
+}
+
+.profile-card .ant-card-head {
+  padding: 0 20px !important;
+  min-height: 0 !important;
+  background: var(--pc-panel) !important;
+  border-bottom: 1px solid var(--pc-line) !important;
+  color: var(--pc-text) !important;
+}
+
+.profile-card .ant-card-body {
+  padding: 10px 0 !important;
+  background: var(--pc-panel) !important;
+}
+
+.profile-dropdown .profile-card {
+  width: 324px !important;
+  margin: 0 !important;
+  overflow: hidden;
+  border: 1px solid var(--pc-line) !important;
+  border-radius: 16px !important;
+  background: var(--pc-panel) !important;
+  color: var(--pc-text) !important;
+}
+
+.profile-card .ant-card-head-title,
+.profile-card .ant-typography,
+.profile-card .ant-typography-secondary {
+  color: var(--pc-text) !important;
+}
+
+.profile-card .ant-typography-secondary {
+  color: var(--pc-text-dim) !important;
+}
+
+.profile-card .ant-card-body a {
+  display: flex !important;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  padding: 10px 24px;
+  min-height: 42px;
+}
+
+.profile-card .ant-card-body div {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 8px 20px;
+}
+
+.profile-card .ant-card-body a:hover,
+.profile-card .ant-card-body div:hover {
+  color: var(--pc-green) !important;
+  background-color: rgba(46,213,115,0.05) !important;
+  box-sizing: border-box;
+}
+
+.profile-card {
+  border: none !important;
+  box-shadow: none !important;
+}

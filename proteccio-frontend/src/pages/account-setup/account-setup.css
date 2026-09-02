@@ -1,0 +1,285 @@
+/* Account Setup Page Styles */
+
+/* Steps styling - using Ant Design theme tokens */
+.ant-steps-item-finish .ant-steps-item-icon {
+  border-color: var(--ant-color-primary) !important;
+  background-color: var(--ant-color-primary) !important;
+}
+
+.ant-steps-item-icon {
+  width: 32px !important;
+  height: 32px !important;
+  margin: 0 8px 0 0 !important;
+  font-size: 16px !important;
+  line-height: 32px !important;
+  text-align: center !important;
+  border: 1px solid var(--ant-color-border) !important;
+  border-radius: 32px !important;
+  transition: all 0.3s !important;
+  background-color: var(--ant-color-bg-container) !important;
+  color: var(--ant-color-text) !important;
+}
+
+.ant-steps-item-wait .ant-steps-item-icon {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.ant-steps-item-process .ant-steps-item-icon {
+  border-color: var(--ant-color-primary) !important;
+  background-color: var(--ant-color-primary) !important;
+  color: var(--ant-color-white) !important;
+}
+
+.progress-steps .ant-steps-item.ant-steps-item-process .ant-steps-item-title::after {
+  background-color: var(--ant-color-primary) !important;
+  width: 60px !important;
+}
+
+.ant-steps-item-title {
+  color: var(--ant-color-text) !important;
+}
+
+.ant-steps-item-description {
+  color: var(--ant-color-text-secondary) !important;
+}
+
+.organization-step {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.ant-card.organization-step-card {
+  border: 1px solid var(--pc-line) !important;
+  border-width: 1px !important;
+  background-color: var(--pc-panel) !important;
+  box-shadow: none !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ant-card.organization-step-card:hover {
+  border-color: var(--pc-line) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12) !important;
+}
+
+.organization-step-card .ant-card-body {
+  padding: 20px 24px !important;
+  background-color: var(--pc-panel) !important;
+}
+
+.organization-step .organization-privacy-note {
+  background-color: var(--pc-panel-2) !important;
+  border: 1px solid var(--pc-line) !important;
+}
+
+.organization-name-input {
+  height: 42px;
+  border-color: var(--ant-color-border) !important;
+}
+
+.organization-name-input:hover,
+.organization-name-input:focus {
+  border-color: var(--ant-color-primary) !important;
+}
+
+.organization-name-input:focus {
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--ant-color-primary) 16%, transparent) !important;
+}
+
+.survey-option-selected {
+  color: #f3f6f9;
+  box-shadow: 0 0 0 1px rgba(46, 213, 115, 0.12);
+}
+
+.survey-option-radio-selected {
+  border-color: #2ed573 !important;
+  background-color: #2ed573 !important;
+}
+
+.survey-option-text-selected {
+  color: #2ed573 !important;
+}
+
+/* Responsive layout */
+@media (max-width: 1000px) {
+  .progress-steps,
+  .step,
+  .step-content {
+    width: 90% !important;
+    max-width: 500px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .progress-steps,
+  .step,
+  .step-content {
+    width: 95% !important;
+    max-width: 400px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .organization-step {
+    max-width: 100%;
+  }
+
+  .organization-step-card .ant-card-body {
+    padding: 16px !important;
+  }
+
+  .organization-step-card .ant-form-item-row {
+    display: block;
+  }
+
+  .organization-step-card .ant-form-item-label {
+    padding: 0 0 6px;
+    text-align: left;
+  }
+
+  .organization-step-card .ant-form-item-control,
+  .organization-name-input {
+    width: 100%;
+  }
+
+  .progress-steps {
+    display: none !important;
+  }
+
+  .step {
+    display: none !important;
+  }
+
+  .step-content {
+    width: 100% !important;
+    max-width: 300px !important;
+    padding: 0 1rem !important;
+  }
+}
+
+/* Tasks step specific styles */
+.tasks-step .task-item-card {
+  border: 1px solid var(--pc-line) !important;
+  background-color: var(--pc-panel) !important;
+  transition: all 0.3s ease;
+}
+
+.tasks-step .task-item-card .ant-card-body {
+  background-color: var(--pc-panel) !important;
+}
+
+.tasks-step .task-item-card:focus-within {
+  border-color: var(--pc-cyan) !important;
+  box-shadow: 0 0 0 2px rgba(46, 213, 115, 0.14) !important;
+}
+
+.tasks-step .task-item-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.tasks-step .task-input {
+  font-size: 16px;
+}
+
+.tasks-step .task-input:focus {
+  box-shadow: none !important;
+}
+
+/* Project step specific styles */
+.project-start-card {
+  border: 1px solid var(--pc-line) !important;
+  background-color: var(--pc-panel) !important;
+}
+
+.project-start-card .ant-card-body {
+  background-color: var(--pc-panel) !important;
+}
+
+.project-step .ant-input-affix-wrapper {
+  transition: all 0.3s ease;
+}
+
+.project-step .ant-input-affix-wrapper:focus-within {
+  box-shadow: 0 0 0 2px rgba(46, 213, 115, 0.16);
+  border-color: var(--pc-cyan);
+}
+
+.project-suggestion-button {
+  background-color: var(--pc-panel-2) !important;
+  border-color: var(--pc-line) !important;
+  color: var(--pc-text-dim) !important;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.project-suggestion-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-suggestion-button:active {
+  transform: translateY(0);
+}
+
+/* Organization step specific styles */
+.organization-step .ant-input-affix-wrapper {
+  transition: all 0.3s ease;
+}
+
+.organization-step .ant-input-affix-wrapper:focus-within {
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.1);
+  border-color: #1890ff;
+}
+
+.organization-suggestion-button {
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.organization-suggestion-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-member-entry {
+  border: 1px solid var(--pc-line) !important;
+  background-color: var(--pc-panel) !important;
+}
+
+.team-member-entry:focus-within {
+  border-color: var(--pc-cyan) !important;
+  box-shadow: 0 0 0 2px rgba(46, 213, 115, 0.14) !important;
+}
+
+.team-member-info-alert {
+  background-color: var(--pc-panel-2) !important;
+  border-color: var(--pc-line) !important;
+}
+
+.organization-suggestion-button:active {
+  transform: translateY(0);
+}
+
+/* Survey step animations */
+.survey-page-transition {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Theme transitions */
+* {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
