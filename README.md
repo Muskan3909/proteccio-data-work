@@ -468,6 +468,46 @@ Proteccio uses Google Analytics to better understand how the application is used
 - 📜 Data is stored and handled according to [Google's Privacy Policy](https://policies.google.com/privacy)
 <br/>
 
+## 🔄 CI/CD & Deployment Pipeline
+
+### Local Docker Workflow (Recommended)
+
+For development and testing, use the local Docker Compose setup:
+
+```bash
+# Build and start all services
+docker compose up -d --build
+
+# View service logs
+docker compose logs -f
+
+# Stop services
+docker compose down
+
+# Remove volumes and start fresh
+docker compose down -v
+```
+
+This setup works locally and requires **no CI/CD configuration**. The Docker Compose stack includes:
+- React frontend (port 5000)
+- Express backend (port 3000)  
+- PostgreSQL database
+- MinIO S3-compatible storage (port 9001)
+- Nginx reverse proxy
+
+### GitHub Actions Workflow
+
+The `.github/workflows/build-images.yaml` workflow is currently **disabled** and configured for manual trigger. It publishes Docker images to GitHub Container Registry (GHCR).
+
+To enable automatic publishing:
+1. Ensure GHCR credentials are configured as GitHub Actions secrets
+2. Update the workflow trigger conditions in `.github/workflows/build-images.yaml`
+3. Modify context paths if directories are renamed
+
+**Note:** The Azure Static Web Apps workflow (`azure-static-web-apps-*.yml`) is active and deploys the frontend to Azure when the `feature/ncinga` branch is pushed.
+
+<br>
+
 ## 🤝 Contributing
 We love contributions from the community! Here's how you can help:
 
